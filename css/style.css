@@ -1,0 +1,313 @@
+/* Style for principal pages */
+/* Style margin the columns */
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Style font body */
+body {
+    font-family: Roboto, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+    background-color: #333;
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+/* Create two columns that floats next to each other */
+nav {
+    float: left;
+    width: 30%;
+    padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+/* Style menu lateral */
+nav ul > li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+/* Hover for menu lateral */
+nav ul > li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+/* Style the article straight */
+article {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    background-color: #f1f1f1;
+}
+
+/* Clear floats after the columns */
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the footer */
+footer {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.logo {
+    width: 40%;
+    height: auto;
+    margin: 10px;
+}
+
+.responsive {
+    width: 100%;
+}
+
+.welcome {
+    text-align: center;
+    font-size: 32px;
+    padding: 10px;
+}
+
+/* Menu */
+ul.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+.menu > li {
+    float: right;
+}
+
+.menu > li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu > li a:hover {
+    background-color: #111;
+}
+
+.menu > ul li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.menu > ul li a.active {
+    background-color: #04AA6D;
+}
+
+.menu > ul li.right {
+    float: right;
+}
+
+@media screen and (max-width: 600px) {
+    ul.menu li.right,
+    ul.menu li {
+        float: none;
+    }
+}
+
+.menu-active {
+    background-color: #4CAF50;
+}
+
+.menu-divider {
+    border-right: 1px solid #bbb;
+}
+
+/* Articles */
+article > h1, h2, h3 {
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+/*Parrafos*/
+.paragraphs {
+    text-align: justify-all;
+    text-justify: distribute-all-lines;
+}
+
+/* Style for Form Login and Register*/
+/* Style for the div that contains the form */
+.form {
+    align-items: center;
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
+}
+
+/* Style for form*/
+.forms {
+    background-color: #15172b;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 10px;
+    color: white;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .forms {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Titles from welcome and form register */
+.title {
+    text-align: center;
+    color: #eee;
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+/* Style for form inputs */
+.input-container {
+    height: 50px;
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+}
+
+/* Input type email, password, text */
+input[type=email], input[type=password], input[type=text] {
+    background-color: #303245;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    font-size: 18px;
+    height: 100%;
+    outline: 0;
+    padding: 4px 20px 0;
+    width: 100%;
+}
+
+/*Title remember me*/
+.remember {
+    margin-top: 20px;
+    color: #eeeeee;
+}
+
+/* Style for button login and register*/
+.submit {
+    background-color: #04AA6D;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top: 40px;
+    text-align: center;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.submit:active {
+    background-color: #02ffa0;
+}
+
+/* Style for products */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 100%;
+    height: 150px;
+    border-radius: 5px;
+    display: flex;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.card-high {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 100%;
+    height: 370px;
+    border-radius: 5px;
+    display: block;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.card:hover, .card-high {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px 0 0 5px;
+}
+
+.img-high {
+    width: 100%;
+    margin: auto;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+
+.container {
+    padding: 2px 16px;
+    display: block;
+}
+
+.card-button {
+    position: absolute;
+    right: 20px;
+    outline: none;
+    border: none;
+    align-items: center;
+    background-color: #4CAF50;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    color: white;
+}
+
+
