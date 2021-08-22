@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>E-Kaktus - Carrito</title>
+    <!--Applied styles-->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+
+<body>
+<!--Create header-->
+<header>
+    <div class="header header-title">
+        <img
+                class="logo"
+                src="../images/logo.png"
+                alt="Logotipo">
+        <h2>La mejor tienda de Cactus y Suculentas en Guatemala</h2>
+    </div>
+</header>
+
+<!--Create menu-->
+<ul class="menu">
+    <li><a href="cart.html" target="_blank" class="menu-divider menu-active">Carrito</a></li>
+    <li><a href="products.html" target="_blank" class="menu-divider">Catalogo</a></li>
+    <li><a href="product_best_sellers.html" target="_blank">Productos más vendidos</a></li>
+    <li><a href="../index.html" target="_blank">Inicio</a></li>
+</ul>
+
+<!--Create main content-->
+<section>
+    <!--Create information-->
+    <h2 class="welcome">Su pedido</h2>
+    <div class="container">
+        <div class="row mt-12 mb-5">
+            <div class="col-md-4">
+                <h5>Datos de compra</h5>
+                <form id="form-cart">
+                    <div class="mb-3">
+                        <label for="nit" class="form-label">NIT</label>
+                        <input type="text" class="form-control" id="nit" name="nit" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Dirección de entrega</label>
+                        <input type="text" class="form-control" id="address" name="address" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Confirmar pedido</button>
+                </form>
+            </div>
+            <div class="col-md-8">
+                <table id="products-table" class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">Código</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Foto</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <h4 id="total">Total</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Create footer-->
+<footer>
+    <p>Contáctanos</p>
+    <p>+502 2299-7788</p>
+    <p><a href="mailto:ekaktus@example.com">ekaktus@example.com</a></p>
+    <p>2021 e-kaktus©</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous">
+</script>
+
+<script src="../js/cart.js"></script>
+
+</body>
+</html>

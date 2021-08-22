@@ -203,11 +203,11 @@ article > h1, h2, h3 {
     height: 50px;
     position: relative;
     width: 100%;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 /* Input type email, password, text */
-input[type=email], input[type=password], input[type=text] {
+#username, #email, #password, #repeat{
     background-color: #303245;
     border-radius: 12px;
     border: 0;
@@ -226,9 +226,13 @@ input[type=email], input[type=password], input[type=text] {
     color: #eeeeee;
 }
 
+.register, .login{
+    margin-top: 20px;
+}
+
 /* Style for button login and register*/
 .submit {
-    background-color: #04AA6D;
+    background-color: #4CAF50;
     border-radius: 12px;
     border: 0;
     box-sizing: border-box;
@@ -236,17 +240,13 @@ input[type=email], input[type=password], input[type=text] {
     cursor: pointer;
     font-size: 18px;
     height: 50px;
-    margin-top: 40px;
+    margin-top: 20px;
     text-align: center;
     width: 100%;
 }
 
 button:hover {
     opacity: 0.8;
-}
-
-.submit:active {
-    background-color: #02ffa0;
 }
 
 /* Style for products */
@@ -310,4 +310,8 @@ button:hover {
     color: white;
 }
 
+/* Style image add product*/
+.image-table {
+    width: 200px;
+}
 
