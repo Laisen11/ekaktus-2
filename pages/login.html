@@ -25,12 +25,13 @@
 
 <!--Create form with all the input-->
 <div class="form">
-    <form class="form-login">
+    <form id="form-login" class="form-login">
         <h1 class="title">Bienvenido</h1>
         <!--Input for email-->
         <div class="input-container">
             <label for="user"></label>
             <input id="user"
+                   name="user"
                    type="text"
                    placeholder="User" required/>
         </div>
@@ -38,6 +39,7 @@
         <div class="input-container">
             <label for="password"></label>
             <input id="password"
+                   name="password"
                    type="password"
                    placeholder="Password" required/>
         </div>

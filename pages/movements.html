@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>E-Kaktus - Movimiento de Entrada</title>
+    <!--Applied styles-->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+
+<body>
+<!--Create header-->
+<header>
+    <div class="header header-title">
+        <img
+                class="logo"
+                src="../images/logo.png"
+                alt="Logotipo">
+        <h2>La mejor tienda de Cactus y Suculentas en Guatemala</h2>
+    </div>
+</header>
+
+<!--Create menu-->
+<ul class="menu">
+    <li><a href="movements.html" target="_blank" class="menu-divider menu-active">Movimientos</a></li>
+    <li><a href="../pages/dashboard.html">Inicio</a></li>
+</ul>
+
+<!--Create main content-->
+<section>
+    <!--Create information-->
+    <h2 class="welcome">Movimiento de productos</h2>
+    <div class="container">
+        <div class="row mt-5 mb-5">
+            <div class="col-md-12 form-group mb-5">
+                <form id="form-detail" class="row form-group d-flex align-items-end">
+                    <div class="col-md-4">
+                        <label for="name" class="form-label">Producto</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="code" class="form-label">Código</label>
+                        <input type="number" class="form-control" id="code" name="code" required>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="amount" class="form-label">Cantidad</label>
+                        <input type="number" class="form-control" id="amount" name="amount" required>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="price" class="form-label">Precio</label>
+                        <input type="number" class="form-control" id="price" name="price" required>
+                    </div>
+                    <div class="col-md-2">
+                        <button type="submit" class="btn btn-primary">Agregar producto</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-12">
+                <table id="table-detail" class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Código</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+
+                <h4 class="mb-5" id="total">Total</h4>
+
+                <div class="col-md-12 mb-5">
+                    <form id="form-master">
+                        <div class="row form-group">
+                            <div class="col-md-3">
+                                <label for="order" class="form-label">Número de orden</label>
+                                <input type="number" class="form-control" id="order" name="order" required>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="supplier" class="form-label">Proveedor</label>
+                                <input type="text" class="form-control" id="supplier" name="supplier" required>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="date" class="form-label">Fecha</label>
+                                <input type="date" class="form-control" id="date" name="date" required>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="type" class="form-label">Tipo de movimiento</label>
+                                <select class="form-select" aria-label="Tipo de movimiento" id="type" name="type">
+                                    <option value="1">Entrada</option>
+                                    <option value="2">Salida</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row form-group mt-4">
+                            <div class="col-md-4">
+                                <button type="submit" class="btn btn-success">Crear orden</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Create footer-->
+<footer>
+    <p>Contáctanos</p>
+    <p>+502 2299-7788</p>
+    <p><a href="mailto:ekaktus@example.com">ekaktus@example.com</a></p>
+    <p>2021 e-kaktus©</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous">
+</script>
+
+<script src="../js/movements.js"></script>
+
+</body>
+</html>

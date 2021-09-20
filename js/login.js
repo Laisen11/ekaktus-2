@@ -1,13 +1,14 @@
-//get form and inputs
-const form = document.getElementById('form-login')
-const user = document.getElementById('user');
-const password = document.getElementById('password');
+$("form#form-login").submit(function (e) {
+    e.preventDefault();
+    const values = {};
 
-//action click on the login button
-form.addEventListener('submit', function (event) {
-    //credential validation
-    if(user == 'admin' && password == '1234'){
-        //administration page access
-        window.location.href="dashboard.html"; 
+    $.each($("#form-login").serializeArray(), function (i, field) {
+        values[field.name] = field.value;
+    });
+
+    if (values.user === 'admin' && values.password === '12345') {
+        window.location.href = "dashboard.html";
+    } else {
+        alert('Credenciales inválidas');
     }
 });
