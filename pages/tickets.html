@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>E-Kaktus - Catálogo de productos</title>
+    <title>E-Kaktus - Movimiento de Entrada</title>
     <!--Applied styles-->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet"
@@ -29,59 +29,74 @@
 
 <!--Create menu-->
 <ul class="menu">
-    <li><a href="products.html" target="_blank" class="menu-divider menu-active">Administrador de catalogo</a></li>
+    <li><a href="tickets.html" target="_blank" class="menu-divider menu-active">Entradas</a></li>
     <li><a href="../pages/dashboard.html">Inicio</a></li>
 </ul>
 
 <!--Create main content-->
 <section>
     <!--Create information-->
-    <h2 class="welcome">Productos</h2>
+    <h2 class="welcome">Entradas</h2>
     <div class="container">
         <div class="row mt-5 mb-5">
             <div class="col-md-4">
-                <form id="form-product">
+                <form id="form-ticket">
+                    <div class="mb-3">
+                        <label for="supplier" class="form-label">Proveedor</label>
+                        <input type="text" class="form-control" id="supplier" name="supplier" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="date" class="form-label">Fecha</label>
+                        <input type="date" class="form-control" id="date" name="date" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="type" class="form-label">Tipo de movimiento</label>
+                        <input type="text" class="form-control" id="type" name="type" required>
+                    </div>
                     <div class="mb-3">
                         <label for="code" class="form-label">Código</label>
                         <input type="number" class="form-control" id="code" name="code" required>
                     </div>
                     <div class="mb-3">
-                        <label for="name" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="name" name="name" required>
+                        <label for="product" class="form-label">Producto</label>
+                        <input type="number" class="form-control" id="product" name="product" required>
                     </div>
                     <div class="mb-3">
-                        <label for="description" class="form-label">Descripción</label>
-                        <input type="text" class="form-control" id="description" name="description" required>
+                        <label for="amount" class="form-label">Cantidad</label>
+                        <input type="number" class="form-control" id="amount" name="amount" required>
                     </div>
                     <div class="mb-3">
                         <label for="price" class="form-label">Precio</label>
                         <input type="number" class="form-control" id="price" name="price" required>
                     </div>
                     <div class="mb-3">
-                        <label for="photo" class="form-label">Foto</label>
-                        <input type="text" class="form-control" id="photo" name="photo" required>
+                        <label for="total" class="form-label">Total</label>
+                        <input type="number" class="form-control" id="total" name="total" required>
                     </div>
                     <button type="submit" class="btn btn-primary">Guardar</button>
                 </form>
             </div>
             <div class="col-md-8">
-                <table id="products-table" class="table table-hover">
+                <table id="tickets-table" class="table table-hover">
                     <thead>
                     <tr>
+                        <th scope="col">Proveedor</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Tipo</th>
                         <th scope="col">Código</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Descripción</th>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Cantidad</th>
                         <th scope="col">Precio</th>
-                        <th scope="col">Foto</th>
-                        <th scope="col">Acciones</th>
+                        <th scope="col">Total</th>
                     </tr>
                     </thead>
                     <tbody></tbody>
                 </table>
+                <h4 id="total">Total</h4>
             </div>
         </div>
     </div>
-
+<!--
     <div class="modal fade" id="product-edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -92,7 +107,7 @@
                 <div class="modal-footer"></div>
             </div>
         </div>
-    </div>
+    </div>-->
 </section>
 
 <!--Create footer-->
@@ -111,7 +126,7 @@
         crossorigin="anonymous">
 </script>
 
-<script src="../js/catalogue.js"></script>
+<script src="../js/tickets.js"></script>
 
 </body>
 </html>

@@ -182,6 +182,16 @@ article > h1, h2, h3 {
     text-align: center;
 }
 
+.form-login {
+    background-color: #15172b;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 10px;
+    color: white;
+    text-align: center;
+}
+
 @media (max-width: 600px) {
     .forms {
         width: 100%;
@@ -207,7 +217,7 @@ article > h1, h2, h3 {
 }
 
 /* Input type email, password, text */
-#username, #email, #password, #repeat{
+#username, #user, #password, #repeat{
     background-color: #303245;
     border-radius: 12px;
     border: 0;

@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login</title>
+    <title>E-Kaktus - Existencias</title>
     <!--Applied styles-->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Roboto">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 </head>
+
 <body>
 <!--Create header-->
 <header>
@@ -23,35 +27,33 @@
     </div>
 </header>
 
-<!--Create form with all the input-->
-<div class="form">
-    <form class="form-login">
-        <h1 class="title">Bienvenido</h1>
-        <!--Input for email-->
-        <div class="input-container">
-            <label for="user"></label>
-            <input id="user"
-                   type="text"
-                   placeholder="User" required/>
-        </div>
-        <!--Input for password-->
-        <div class="input-container">
-            <label for="password"></label>
-            <input id="password"
-                   type="password"
-                   placeholder="Password" required/>
-        </div>
-        <!--Button Login-->
-        <button type="submit"
-                class="submit">Login
-        </button>
+<!--Create menu-->
+<ul class="menu">
+    <li><a href="stock.html" target="_blank" class="menu-divider menu-active">Existencias</a></li>
+    <li><a href="../pages/dashboard.html">Inicio</a></li>
+</ul>
 
-        <div class="register">
-            <p>¿No tienes cuenta?</p>
-            <a href="register.html"><strong>Registrarse</strong></a>
+<!--Create main content-->
+<section>
+    <!--Create information-->
+    <h2 class="welcome">Existencias</h2>
+    <div class="container">
+        <div class="row mt-5 mb-5">
+            <div class="col-md-8">
+                <table id="tickets-table" class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Existencia</th>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
         </div>
-    </form>
-</div>
+    </div>
+</section>
 
 <!--Create footer-->
 <footer>
@@ -60,6 +62,7 @@
     <p><a href="mailto:ekaktus@example.com">ekaktus@example.com</a></p>
     <p>2021 e-kaktus©</p>
 </footer>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
 </script>
@@ -68,7 +71,7 @@
         crossorigin="anonymous">
 </script>
 
-<!--implementation file js-->
-<script src="../js/login.js"></script>
+<script src="../js/stock.js"></script>
+
 </body>
 </html>
